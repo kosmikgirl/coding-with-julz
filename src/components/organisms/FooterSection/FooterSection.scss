@@ -1,0 +1,47 @@
+@import "../../../sass/colors";
+@import "../../../sass/mediaqueries";
+
+.footer-container {
+  padding-block: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $theme_green;
+  color: $theme_gray;
+
+  .footer-social {
+    margin-block: 2rem;
+    ul {
+      display: flex;
+      @include respond(mobile) {
+        flex-direction: column;
+      }
+      li {
+        padding-inline: 1rem;
+        cursor: pointer;
+        @include respond(mobile) {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    margin-block: 3rem;
+  }
+  .footer-inspirational {
+    margin-block: 3rem;
+    width: 50%;
+    @include respond(mobile) {
+      width: 100%;
+    }
+    p {
+      font-family: "Dawning of a New Day", cursive;
+      font-size: 3rem;
+      @include respond(mobile) {
+        font-size: 2rem;
+        padding-inline: 1rem;
+      }
+    }
+  }
+}

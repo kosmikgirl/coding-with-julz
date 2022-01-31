@@ -1,0 +1,77 @@
+@import "../../../sass/colors";
+@import "../../../sass/mediaqueries";
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  @include respond(mobile) {
+    flex-direction: column;
+    display: flex;
+  }
+  .desktop-menu {
+    display: flex;
+  }
+  li {
+    padding: 1.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    @include respond(mobile) {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: $theme_gray;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.15em;
+      padding: 1rem;
+      position: relative;
+      @include respond(mobile) {
+        font-size: 1.8rem;
+      }
+    }
+    a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: $theme_gray;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+    a:hover:after {
+      width: 100%;
+      left: 0;
+    }
+  }
+  .responsive-menu {
+    z-index: 10;
+    background-color: $theme_green;
+    flex-direction: column;
+    font-size: 2.4rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    li {
+      display: block;
+    }
+  }
+  .mobile-toggle {
+    display: none;
+    border: none;
+    background: none;
+    padding: 1rem;
+    cursor: pointer;
+    @include respond(mobile) {
+      display: block;
+      position: absolute;
+      top: 0.4rem;
+      left: 0.4rem;
+    }
+  }
+}

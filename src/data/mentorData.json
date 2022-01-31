@@ -1,0 +1,29 @@
+[
+  {
+    "title": "New",
+    "subtitle": "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
+    "tools": ["HTML", "CSS", "Sass", "JavaScript", "React", "Vue", "ES6"],
+    "about": "I'm a Front-End Web Developer, oriented to combine the art of design with the art of programming. Passionate about translating UI/UX design wireframes to actual code and bridge the gap between graphical design and technical implementation using web markup languages like HTML5 and CSS3, server-side CSS pre-processing platforms, such as LESS and SASS, client-side scripting and JavaScript (ES6) libraries, like React"
+  },
+  {
+    "title": "Newww",
+    "subtitle": "Every developer has their own preference dev tools and frameworks to work with",
+    "tools": [
+      "VSCode",
+      "Bitbucket",
+      "Ant Design",
+      "iTerm",
+      "Stackblitz",
+      "GitHub",
+      "Jira",
+      "Figma"
+    ],
+    "about": "I'm a React fan. Also vanilla Javascript and Sass are my second language. I cannot live without my iTerm2 (or any kind of terminal) and my beautiful theme in VSCode. Mac or Linux are my preference, I broke up with Windows a long time ago!"
+  },
+  {
+    "title": "Mentoring",
+    "subtitle": "As a life coaching entusiast and coding lover, I genuinely care about people, and love helping fellow developer work on their art and tch.",
+    "tools": ["Google Meet", "Zoom", "StackBlitz", "CodePen", "GitHub", "Git"],
+    "about": "If you are a self learner, or you feel you need more guidance in the Frontend world, we can plan together a path where you can clarify all your doubts in the process of learning. A personalized assistance will help you to grow faster and also have someone to share your knowledge and build a community!"
+  }
+]

@@ -1,0 +1,86 @@
+@import "../../../sass/colors";
+@import "../../../sass/mediaqueries";
+
+.call-action-container {
+  width: 80%;
+  background-color: $theme_gray;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+  margin: 0 auto;
+  position: relative;
+  top: 5rem;
+  @include respond(mobile) {
+    flex-direction: column;
+    border-radius: 1rem;
+  }
+
+  .box-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include respond(mobile) {
+      padding: 2rem;
+      display: block;
+    }
+  }
+  p {
+    margin: 3rem;
+    width: 30%;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    @include respond(mobile) {
+      width: 100%;
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+  h4 {
+    margin: 3rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+    @include respond(mobile) {
+      margin: 2rem 0;
+      font-size: 1.6rem;
+    }
+  }
+  button {
+    margin: 3rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+
+    border-radius: 0.7rem;
+    border-bottom-left-radius: 0;
+
+    background-color: $theme_green;
+    color: $theme_gray;
+
+    transition: all 0.3s;
+
+    &:hover {
+      border-radius: 0px;
+      color: $theme_gray;
+      background-color: whitesmoke;
+      background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23edb5bf' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      animation: animatedBackground 5s linear infinite alternate;
+    }
+
+    @include respond(mobile) {
+      font-size: 1rem;
+      margin: 2rem 0;
+    }
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}

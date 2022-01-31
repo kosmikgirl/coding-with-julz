@@ -1,0 +1,67 @@
+@import "../../../sass/colors";
+@import "../../../sass/mediaqueries";
+
+.info_container {
+  display: flex;
+  width: 65%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: relative;
+  bottom: 200px;
+  background-color: white;
+  @include respond(mobile) {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+  }
+}
+
+.info_box {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.3rem;
+  border-right: 1px solid #e6ecf8;
+  @include respond(mobile) {
+    width: 80%;
+    border-bottom: 1px solid #e6ecf8;
+    padding: 0;
+    border-right: none;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  h2,
+  h5,
+  ul,
+  p {
+    padding-block: 1rem;
+    color: $theme_gray;
+    line-height: 1.8rem;
+  }
+  &:last-child {
+    border-right: none;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: $theme_green;
+    padding-top: 2rem;
+  }
+  ul {
+    font-size: 1rem;
+  }
+  .logo-info {
+    width: 100px;
+    padding: 2rem;
+  }
+}

@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { ScrollingProvider, Section } from "react-scroll-section";
+import "./App.scss";
+import { CallToAction } from "./components/molecules/CallToAction/CallToAction";
+import { DividerSection } from "./components/organisms/DividerSection/DividerSection";
+import { FooterSection } from "./components/organisms/FooterSection/FooterSection";
+import { HeaderSection } from "./components/organisms/HeaderSection/HeaderSection";
+import { InfoSection } from "./components/organisms/InfoSection/InfoSection";
+import developerData from "./data/developerData.json";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <ScrollingProvider className="app-container">
+        <Section id="home">
+          <HeaderSection />
+        </Section>
+        <Section id="about-me">
+          <DividerSection />
+        </Section>
+        <Section id="my-services">
+          <InfoSection infoData={developerData} />
+        </Section>
+        <CallToAction />
+        <Section id="how-to-reach-me">
+          <FooterSection />
+        </Section>
+      </ScrollingProvider>
     </div>
   );
 }

@@ -1,0 +1,45 @@
+@import "./sass/mediaqueries";
+@import "./sass/colors";
+
+html,
+body {
+  border: 8px solid $theme_pink;
+  box-sizing: border-box;
+  @include respond(mobile) {
+    border: 5px solid $theme_pink;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+.app-container {
+  text-align: center;
+}
+
+* {
+  font-family: "Lato", sans-serif;
+}
+
+::selection {
+  background-color: #edb5bf;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}

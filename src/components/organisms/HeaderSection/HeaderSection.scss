@@ -1,0 +1,65 @@
+@import "../../../sass/colors";
+@import "../../../sass/mediaqueries";
+
+.header-container {
+  background-color: $theme_light_pink;
+  height: 100vh;
+  position: relative;
+  .copywriting-animation {
+    color: $theme_gray;
+    font-size: 7vh;
+    position: absolute;
+    top: 30vh;
+    text-align: left;
+    padding-inline: 2rem;
+    overflow: hidden;
+    @include respond(mobile) {
+      top: 20vh;
+    }
+    .box {
+      position: absolute;
+      top: 0;
+      display: inline-block;
+      background: $theme_pink;
+      height: 1vh;
+    }
+    .hi {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+
+.header-ilustration {
+  width: 40%;
+  position: absolute;
+  right: 3rem;
+  bottom: 10px;
+  @include respond(mobile) {
+    width: 80%;
+  }
+}
+
+.principal-logo {
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  width: 150px;
+  filter: brightness(0.5);
+  @include respond(mobile) {
+    display: none;
+  }
+}
+
+.animate {
+  opacity: 0;
+  transform: translateX(80vh);
+  visibility: hidden;
+  will-change: opacity, transform, visibility;
+}
+
+.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
